@@ -1,0 +1,20 @@
+pre_bump_hooks = [
+    "cargo build --release",
+    "cargo set-version {{version}}",
+    "cargo check --release",
+    "git add :/Cargo.lock",
+]
+post_bump_hooks = [
+    "git push",
+    "git push origin {{version}}",
+]
+
+[commit_types]
+
+[changelog]
+path = "CHANGELOG.md"
+authors = [
+    { signature = "Marcin Puc", username = "tranzystorek-io" }
+]
+
+[bump_profiles]
