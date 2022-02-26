@@ -33,5 +33,8 @@ fn main() {
         } => {
             builder::clean_orphans().exec();
         }
+        Command::Completion { shell } => {
+            cli::generate_completion(shell);
+        }
     }
 }

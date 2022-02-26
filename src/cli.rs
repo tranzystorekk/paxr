@@ -1,4 +1,11 @@
-use clap::{AppSettings, Parser, Subcommand};
+use clap::{AppSettings, CommandFactory, Parser, Subcommand};
+use clap_complete::Shell;
+
+const BIN_NAME: &str = env!("CARGO_BIN_NAME");
+
+pub fn generate_completion(shell: Shell) {
+    clap_complete::generate(shell, &mut Cli::command(), BIN_NAME, &mut std::io::stdout());
+}
 
 /// Opinionated wrapper for the XBPS package manager
 #[derive(Parser)]
@@ -40,6 +47,13 @@ pub enum Command {
     Orphans {
         #[clap(subcommand)]
         cmd: Option<Orphans>,
+    },
+
+    /// Generate shell completion
+    Completion {
+        /// Shell to generate completion for
+        #[clap(arg_enum)]
+        shell: Shell,
     },
 }
 
