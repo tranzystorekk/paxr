@@ -26,12 +26,12 @@ fn main() {
         Command::Orphans {
             cmd: Some(Orphans::Clean) | None,
         } => {
-            builder::list_orphans().exec();
+            builder::clean_orphans().exec();
         }
         Command::Orphans {
             cmd: Some(Orphans::List),
         } => {
-            builder::clean_orphans().exec();
+            builder::list_orphans().exec();
         }
         Command::Completion { shell } => {
             cli::generate_completion(shell);
