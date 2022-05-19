@@ -15,7 +15,7 @@ It compresses the most common package maintenance operations into intuitive comm
 
 ### Manual
 
-Ensure you have Rust installed. Clone this project and run within the repo root:
+Ensure you have Rust [installed](https://rustup.rs/). Clone this project and run within the repo root:
 
 ```console
 cargo install --path .
