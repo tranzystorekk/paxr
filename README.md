@@ -9,7 +9,7 @@ It compresses the most common package maintenance operations into intuitive comm
 
 - Install packages: `paxr install my-pkg`
 - Uninstall packages (recursive): `paxr uninstall my-pkg`
-- Upgrade packages: `paxr upgrade`
+- Upgrade all installed packages: `paxr upgrade`
 
 ## Installation
 
