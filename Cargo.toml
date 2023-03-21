@@ -4,6 +4,7 @@ version = "0.1.0"
 authors = ["Marcin Puc <marcin.e.puc@gmail.com>"]
 description = "Opinionated wrapper for the XBPS package manager"
 edition = "2021"
+license = "MIT"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
