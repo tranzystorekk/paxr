@@ -35,6 +35,13 @@ pub enum Command {
     #[command(visible_alias = "up")]
     Upgrade,
 
+    /// Search for packages
+    Search {
+        /// Query to search for
+        #[arg(value_name = "QUERY", required = true)]
+        query: String,
+    },
+
     /// Display package info
     Info {
         /// Package to display info for
