@@ -20,6 +20,9 @@ fn main() {
         Command::Upgrade => {
             builder::upgrade().exec();
         }
+        Command::Search { query } => {
+            builder::search(&query).exec();
+        }
         Command::Info { package } => {
             builder::info(&package).exec();
         }
